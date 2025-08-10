@@ -1,0 +1,42 @@
+body{background-color:#FFF;margin:0;padding:0}
+li{list-style-type:none;margin:0;padding:0}
+ul{margin:0;padding:0}
+.cat_nav{width:976px;height:80px;border:1px solid #CCE3FF;background-image:url(/web/20161225065205im_/http://www.qqread.com/2008webcss/images/qqread_cat_nav_bg.gif);background-repeat:repeat-x;margin:0 auto;padding:1px}
+.cat_nav a{font-family:ËÎÌו;font-size:13px;color:#003;text-decoration:none}
+.cat_nav li{padding-right:3px;padding-left:3px;text-align:center;float:left}
+.cat_nav ul{clear:both;line-height:25px}
+.cat_nav .bigcat a:link{font-weight:700;color:#369;font-size:13px}
+.cat_nav .bigcat a:visited{text-decoration:none;font-weight:700;color:#369;font-size:13px}
+.cat_nav .bigcat a:hover{color:#F60;font-size:13px}
+.cat_nav .cat{width:826px;float:left;height:80px}
+.cat_nav .cat .col3{float:left;width:214px}
+.cat_nav .cat .col4{float:left;width:198px}
+.cat_nav .cat a:link{font-family:ËÎÌו, "Times New Roman", Times, serif;font-size:12px}
+.cat_nav .logo{width:150px;float:left;height:80px}
+.cat_nav .logo img{border-style:none}
+.nav{width:967px;font-size:13px;background-image:url(/web/20161225065205im_/http://www.qqread.com/2008pages/images/qqread_hung.gif);background-repeat:no-repeat;background-position:800px;color:#003;background-color:#EDF1FC;margin:0 auto;padding:5px 3px 3px 10px}
+.nav a:link{font-size:13px;color:#003;text-decoration:none}
+.nav a:hover{font-size:13px;color:#F60;text-decoration:none}
+.nav a:visited{text-decoration:none;color:#C60;font-size:13px}
+.cat_nav .cat .col1,.cat_nav .cat .col2{float:left;width:207px}
+.nav .emp,.nav .emp a:link,.nav .emp a:hover,.nav .emp a:visited{color:#F60}
+/*
+     FILE ARCHIVED ON 06:52:05 Dec 25, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:51:12 Aug 10, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.553
+  exclusion.robots: 0.027
+  exclusion.robots.policy: 0.016
+  esindex: 0.01
+  cdx.remote: 10.328
+  LoadShardBlock: 199.905 (3)
+  PetaboxLoader3.datanode: 138.01 (5)
+  PetaboxLoader3.resolve: 310.748 (3)
+  load_resource: 317.505 (2)
+*/

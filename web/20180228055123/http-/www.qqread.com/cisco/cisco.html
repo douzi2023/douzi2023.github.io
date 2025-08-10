@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script type="text/javascript" src="../../../../../_static/js/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../../../../_static/js/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="../../../../../_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.qqread.com:80/cisco/","20171229074905","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1514533745");
+</script>
+<link rel="stylesheet" type="text/css" href="../../../../../_static/css/banner-styles.css" />
+<link rel="stylesheet" type="text/css" href="../../../../../_static/css/iconochive.css" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+<title>Cisco网络的相关文章 - qqread.com</title>
+<base target="_blank"/>
+<meta name="Keywords" content="3550,cisco,dhcp,pix防火墙,交换机配置,设置,网络安全"/>
+<meta name="Description" content="关于Cisco网络的文章：CISCO 3550交换机配置DHCP命令及步骤，CISCO PIX防火墙及网络安全设置手册，思科统一通信与中国市场分析，Cisco 命令行，学习cisco的基础，Cisco、Juniper与HP的第四季度大战，黑客入侵技术详解：cisco路由入侵艺术 （3）等等。"/>
+<link href="https://web.archive.org/web/20171229074905cs_/http:/www.qqread.com/2010webcss/qqread_global_head.css" rel="stylesheet" type="text/css"/>
+<link href="https://web.archive.org/web/20171229074905cs_/http:/www.qqread.com/2010webcss/qqread_2010cat.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="nav"><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/" target="_blank">电脑频道</a> － <a href="https://web.archive.org/web/20171229074905/http://travel.qqread.com/" target="_blank">旅游频道</a> － <a href="https://web.archive.org/web/20171229074905/http://health.qqread.com/" target="_blank">健康频道</a> － <a href="https://web.archive.org/web/20171229074905/http://fashion.qqread.com/" target="_blank">时尚频道</a> － <a href="https://web.archive.org/web/20171229074905/http://down.qqread.com/" target="_blank">驱动下载</a></div>
+<div class="cat_nav">
+  <div class="logo"><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/"><img src="https://web.archive.org/web/20171229074905im_/http:/www.qqread.com/images/QQRead.gif" alt="巧巧电脑网络小图标" width="150" height="80" border="0"/></a></div>
+  <div class="cat">
+    <div class="col1">
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/pic/" title="电脑图文教程" target="_blank">图文</a></li>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/news/" title="it资讯" target="_blank">资讯</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/news/it.html" title="it新闻" target="_blank">新闻</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/news/software.html" title="电脑软件新闻" target="_blank">软件</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/news/internet.html" title="互联网新闻" target="_blank">网络</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/news/virus.html" title="最新病毒通报" target="_blank">安全</a></li>
+      </ul>
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/z/" title="电脑教程专题" target="_blank">专题</a></li>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/commonsoft/" title="常用软件使用教程" target="_blank">软件</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/sys-soft/sysoptimize.html" title="系统优化工具" target="_blank">优化</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/app-soft/netcommunicate.html" title="联络聊天工具" target="_blank">聊天</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/app-soft/media.html" title="媒体播放工具" target="_blank">媒体</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/app-soft/up-download.html" title="上传下载工具" target="_blank">下载</a></li>
+      </ul>
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/sitemap/" title="网站地图" target="_blank">导航</a></li>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/program/" title="程序开发" target="_blank">程序</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/dotnet/" target="_blank">.Net</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/vc/" target="_blank">VC</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/delphi/" target="_blank">Delphi</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/java/" target="_blank">Java</a></li>
+      </ul>
+    </div>
+    <div class="col2">
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/hardware/" title="硬件资讯" target="_blank">硬件</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/hardware/mainboard/" target="_blank">主板</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/hardware/cpu/" target="_blank">CPU</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/hardware/memory/" target="_blank">内存</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/hardware/harddisk/" target="_blank">硬盘</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/hardware/lcd/" target="_blank">显示器</a></li>
+      </ul>
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/network/" title="网络技术" target="_blank">网络</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/route/" title="路由技术" target="_blank">路由</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/exchange/" title="交换技术" target="_blank">交换</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/net-manage/" title="网络管理" target="_blank">网管</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/" title="思科技术" target="_blank">Cisco</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/huawei/" title="华为技术" target="_blank">华为</a></li>
+      </ul>
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/photohandle/" title="图形图像处理软件" target="_blank">图像</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/photoshop/" title="Photoshop" target="_blank">PS</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/coreldraw/" title="coreldraw" target="_blank">Coreldraw</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/illustrator/" title="Illustrator" target="_blank">Illustrator</a></li>
+      </ul>
+    </div>
+    <div class="col3">
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/pcbase/" target="_blank">电脑入门</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/pcbase/base.html" title="电脑术语" target="_blank">术语</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/pcbase/hardware.html" title="电脑硬件基础" target="_blank">硬件基础</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/pcbase/software.html" title="电脑软件基础" target="_blank">软件基础</a></li>
+      </ul>
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/webdesign/" target="_blank">网页制作</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/asp/" title="asp程序开发教程" target="_blank">Asp</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/php/" title="php程序开发教程" target="_blank">Php</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/dreamweaver/" title="Dreamweaver网页制作梦工厂" target="_blank">Dream</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/web-special/" title="网页特效制作教程" target="_blank">特效</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/css/" title="css标准与css样式布局应用" target="_blank">CSS</a></li>
+      </ul>
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/multimedia/" title="多媒体制作" target="_blank">媒体制作</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/director/" title="Director教程" target="_blank">Director</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/flash/" title="flash教程" target="_blank">Flash</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/3dmax/" title="3DMax教程" target="_blank">3DMax</a></li>
+      </ul>
+    </div>
+    <div class="col4">
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/itlife/" title="IT人生故事" target="_blank">IT人</a></li>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/os/" target="_blank">操作系统</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/windows/" title="windows操作系统" target="_blank">Win</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/linux/" target="_blank">Linux</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/unix/" target="_blank">Unix</a></li>
+      </ul>
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/skill/" title="电脑技巧集锦" target="_blank">技巧</a></li>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/netgame/" title="网络游戏(介绍、地图、攻略、壁纸、动画)" target="_blank">网游</a></li>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/database/" title="数据库开发与应用" target="_blank">数据库</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/sqlserver/" title="Microsoft SQL Server数据库开发" target="_blank">SQL</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/oracle/" title="oracle开发" target="_blank">Oracle</a></li>
+      </ul>
+      <ul>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/safe/" title="计算机安全技术" target="_blank">安全</a></li>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/encrypt/" title="计算机加密技术" target="_blank">加密</a></li>
+        <li class="bigcat"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/erp/" title="企业方案" target="_blank">方案</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/erp/2/" title="企业方案与案例" target="_blank">案例</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/erp/3/" title="企业项目管理" target="_blank">项目</a></li>
+        <li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/erp/18/" title="erp实施与管理" target="_blank">ERP</a></li>
+      </ul>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<div class="loc">
+  <div class="loc_logo"><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/"><img src="https://web.archive.org/web/20171229074905im_/http:/www.qqread.com/cisco/images/QQReadTeach1809.gif" alt="巧巧电脑网络" width="145" height="28" border="0"/></a></div>
+  <div class="loc_nav"><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/" target="_blank">电脑频道</a>  &gt; <a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/network/" title="网络技术" target="_self">网络技术</a> &gt; <a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/" title="Cisco网络" target="_self">Cisco网络</a></div>
+  <div id="gg_srch1"></div>
+  <div style="clear:both"></div>
+</div>
+<div class="main">
+  <div class="left">
+    <div class="left_ut"> <div class="ut_title"><h1>Cisco网络</h1><span><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/rank/index.html">&gt;&gt; 排行榜</a></span></div>
+      <div class="share">
+        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"> <a class="bds_tieba">百度贴吧</a> <a class="bds_tsina">新浪微博</a> <a class="bds_hi">百度空间</a> <a class="bds_qzone">QQ空间</a> <a class="bds_tqq">腾讯微博</a> <a class="bds_renren">人人网</a> <a class="bds_kaixin001">开心网</a> <span class="bds_more">更多</span> <a class="shareCount"></a> </div>
+        <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=451565"></script>
+        <script type="text/javascript" id="bdshell_js"></script>
+        <script type="text/javascript">
+	document.getElementById("bdshell_js").src = "https://web.archive.org/web/20171229074905/http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+</script>
+      </div>
+      <div id="gg336utad"></div>
+      <div id="gglinkad200x90"></div>
+      <div class="ut_list"><ul><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p496049.html">CISCO 3550交换机配置DHCP命令及步骤</a></h3><p>CISCO 3550交换机配置DHCP的内容我们再来详细讨论一下，大家可以参照此文的一些配置内容，进行一下对比学习。按照网上介绍的配置一句“IP HELPER-ADDRESS DHCP服务器地址”后，工程当中发现客户机不能从DHCP服务器获取IP地址，本人最近也刚好配置了3550作为DHCP服务器中继代理，最初也曾困惑很久，后来在网上查找资料及在论坛上寻求众人帮助，终于在工程当中测试通过，为避免大家在工程当中遇到此类情况左调右调，特将配置过程写出来，给大家作为参考。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p496049.html">作者：佚名&nbsp;&nbsp;关键字：cisco,3550,交换机配置,dhcp</a><span>发布日期：2010-10-01</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p494070.html">CISCO PIX防火墙及网络安全设置手册</a></h3><p>随着国际互连网的发展，一些企业建立了自己的INTRANET，并通过专线与INTERNET连通。为了保证企业内部网的安全，防止非法入侵，需要使用专用的防火墙计算机。路由器防火墙只能作为过滤器，并不能把内部网络结构从入侵者眼前隐藏起来。只要允许外部网络上的计算机直接访问内部网络上的计算机，就存在着攻击者可以损害内部局域网上机器的安全性，并从那里攻击其他计算机的可能性。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p494070.html">作者：佚名&nbsp;&nbsp;关键字：cisco,pix防火墙,网络安全,设置</a><span>发布日期：2010-06-21</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/v493469.html">思科统一通信与中国市场分析</a></h3><p>UC的概念是思科首先提出的。随之，很多龙头企业也纷纷效仿，提出自己的统一通信概念。但是，作为具有权威性的思科统一通信，在国内，是如何看待这个市场的呢？现在我们就来看看吧。
+统一通信技术（简称UC即Unified Communications )是指把计算机技术与传统通信技术融为一体的新通信模式，作为一种解决方案和应用，其核心内容是：让人们无论任何时间、任何地点，都可以通过任何设备、任何网络，获得数据、图像和声音的自由通信。也就是说，统一通信系统将语音、传真、电子邮件、移动短消息、多媒体和数据等所有信息类型合为一体，从而为人们带来选择的自由和效率的提升。（例如，传统的电话将被取代以支持基于软电话屏幕的客户端软件。）它区别于网络层面的互联互通，而是以人为本的应用层面的融合与协同，是更高一个层次的理念，新一代通信与IT产业。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/v493469.html">作者：佚名&nbsp;&nbsp;关键字：思科,统一通信,中国,市场分析</a><span>发布日期：2010-05-23</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p492800.html">Cisco 命令行，学习cisco的基础</a></h3><p>Ciscopediaaaa accountingaaa authentication arapaaa authentication enable defaultaaa authentication loginaaa authentication nasiaaa authentication password-promptaaa authentication pppaaa authentication username-promptaaa authorizationaaa new-modelradius-server host……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p492800.html">作者：佚名&nbsp;&nbsp;关键字：cisco,命令,学习,基础</a><span>发布日期：2010-04-08</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p490331.html">Cisco、Juniper与HP的第四季度大战</a></h3><p>总观2009年，全球以太网交换机市场增长幅度超过20%。但是CISCO的市场份额则加速亏损。
+Dell’Oro集团最新研究显示，2009年，以太网交换机市场在去年第四季度增加了20%，其中Cisco、HP与Juniper三家营收增长合计超过6亿美元。
+从瑞士独立研究所所提供的数据看来，Cisco总的市场份额其实2009年相比2008年下降1%。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p490331.html">作者：佚名&nbsp;&nbsp;关键字：cisco,juniper,hp</a><span>发布日期：2010-02-24</span></div></li></ul></div><div class="ut_sp"></div><div class="ut_list"><ul><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/e489532.html">黑客入侵技术详解：cisco路由入侵艺术 （3）</a></h3><p>【触及RouterKit】。
+就如攻击视窗系统人喜欢用NTRK，攻击Linux的人则喜欢用rootkit，Router的世界也有这优秀的Kit，让人爱不释手。
+*密码破解机。
+得到路由配置文件后，如果看见在特权模式的配置中可能会有：“enable password 7 14341B180F0B187875212766”这样的加密字串。那么恭喜了，enable password命令的密码加密机制已经很古老,存在极大安全漏洞。通过一些简单的工具就可以得到破解的特权密码。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/e489532.html">作者：佚名&nbsp;&nbsp;关键字：黑客入侵,技术,详解,cisco路由</a><span>发布日期：2010-02-03</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/e489531.html">黑客入侵技术详解：cisco路由入侵艺术 （2）</a></h3><p>*Cisco IOS软件层叠SNMP共享社区字串漏洞。
+Cisco 配置文件中，意外创建和暴露SNMP共享字符串，可以允许未授权地查阅或者修改感染的设备。这种漏洞是调用SNMP函数中的缺陷引起的。SNMP利用“community”的标记来划分“object”组,可以在设备上查看或者修改它们。在组中的数据组织MIB。单个设备可以有几个MIBs，连接在一起形成一个大的结构，不同的社团字符串可以提供只读或者读写访问不同的，可能重叠的大型数据结构的一部分。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/e489531.html">作者：佚名&nbsp;&nbsp;关键字：黑客入侵,技术,详解,cisco路由</a><span>发布日期：2010-02-03</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/e489530.html">黑客入侵技术详解：cisco路由入侵艺术 （1）</a></h3><p>奔流不息的网络里，Web绽放着绚丽的色彩、电子邮件呼哧的穿梭网际、语音电话、网络会议、文件传输，各种数据交织错落，形成辉煌的数字世界。在喧闹的数字世界底层，存在一种精致的次序，这种次序决定着数据的选路、异构介质衔接、协议的交互等功能。而这一次序的缔造者正是布满整个网络的路由器。于是，路由器成了数据通信的交通亭，也成为了众多黑帽(Blackhat)争夺的目标之一。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/e489530.html">作者：佚名&nbsp;&nbsp;关键字：黑客入侵,技术,详解,cisco路由</a><span>发布日期：2010-02-03</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/t488891.html">深入浅出Cisco交换机使用技巧</a></h3><p>思科是目前交换行业的主力军，其产品在市场中的表现非常不错，这里我们主要分析了Cisco交换机的一些使用技巧。作为网管员，免不了要经常调试交换机，祥子单位里面核心骨干交换机以Cisco的为主。在调试、维护Cisco交换机的过程中，祥子会遇到一些很头痛的问题，好在经过这一段时间的系统学习，这些问题都一一解决了，事实上，了解这些方法对于提高调试交换机的效率非常有帮助，在此，将积累的几点小经验介绍一下，供大家参考。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/t488891.html">作者：佚名&nbsp;&nbsp;关键字：cisco交换机,使用,技巧</a><span>发布日期：2010-01-28</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/u488633.html">视点：如何看待CISCO交换机3550系列</a></h3><p>CISCO交换机3550提供了先进的第三层细化QoS特性，能够保证对网络流量的分类与排序，同时很好的解决了网络堵塞。CISCO交换机3550是一种新型的企业级可堆叠多层交换机，可提供高可用性、可扩展性、安全性和可改进网络运营的管理能力。凭借一系列快速以太网和千兆位以太网配置，Catalyst 3550系列Cisco交换机可作为中型企业布线室的强大访问层交换机和中型网络的骨干网交换机。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/u488633.html">作者：佚名&nbsp;&nbsp;关键字：如何,cisco交换机,3550,系列</a><span>发布日期：2010-01-26</span></div></li></ul></div><div class="ut_sp"></div><div class="ut_list"><ul><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/d488623.html">关于CISCO交换机3750性能综合讲解</a></h3><p>CISCO交换机是目前市场上表现非常不错的交换机之一，于是我研究了一下CISCO交换机3750的综合性能，在这里拿出来和大家分享一下，希望对大家有用。2003年6月19日，思科系统公司正式向中国市场推出了新一代可堆叠交换机平台--采用思科智能堆叠（StackWiseT） 技术的CISCO交换机3750系列，从而进一步提高了堆叠交换的业界标准。……</p><div class="spic"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/d488623.html"><img src="https://web.archive.org/web/20171229074905im_/http:/www.qqread.com/ArtImage/20100126/dy32_1.jpg" alt="关于CISCO交换机3750性能综合讲解" width="449" height="330"/></a></div><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/d488623.html">作者：佚名&nbsp;&nbsp;关键字：cisco交换机,75,性能,综合</a><span>发布日期：2010-01-26</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p488616.html">Cisco千兆交换机集成数据服务器功能详解</a></h3><p>相比于其他种类交换机，Cisco千兆交换机具有更多的功能，特别是机框式Cisco千兆交换机，其具有集成数据服务器功能，对于千兆级的交换机而言，可应用于高性能的网络层。Cisco千兆交换机分为很多种，包括了机框式Cisco千兆交换机和集成数据服务器的Cisco千兆交换机等。……</p><div class="spic"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p488616.html"><img src="https://web.archive.org/web/20171229074905im_/http:/www.qqread.com/ArtImage/20100126/dy25_2.jpg" alt="Cisco千兆交换机集成数据服务器功能详解" width="471" height="301"/></a></div><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p488616.html">作者：佚名&nbsp;&nbsp;关键字：cisco,千兆交换机,集成,数据</a><span>发布日期：2010-01-26</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/x487218.html">图解Cisco交换机密码恢复不可忽略的详细步骤</a></h3><p>图解Cisco交换机密码恢复不可忽略的详细步骤，Cisco交换机密码恢复不当就会出现密码丢失的问题，今天我们将接触Cisco交换机密码恢复的步骤。深入了解细节问题对于我们而言是一件很重要的事情，接下来就要详细地介绍Cisco交换机密码恢复相关知识。
+◆按住modem键，通电，待进入控制台后松开：switch：……</p><div class="spic"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/x487218.html"><img src="https://web.archive.org/web/20171229074905im_/http:/www.qqread.com/ArtImage/20100111/ll5_2.jpg" alt="图解Cisco交换机密码恢复不可忽略的详细步骤" width="500" height="269"/></a></div><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/x487218.html">作者：佚名&nbsp;&nbsp;关键字：图解,cisco交换机,密码恢复</a><span>发布日期：2010-01-11</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/h485533.html">介绍路由器实现ADSL接入：针对于Cisco路由器</a></h3><p>介绍路由器实现ADSL接入：针对于Cisco路由器，路由器实现ADSL接入配置共分7步:下面将做出具体的介绍。
+◆路由器实现ADSL接入第一步:配置vpdnvpdn enable(启用路由器的虚拟专用拨号网络---vpnd)vpdn-group office(建立一个vpdn组,)request-dialin(初始化一个vpnd tunnel,建立一个请求拨入的vpdn子组,)……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/h485533.html">作者：佚名&nbsp;&nbsp;关键字：介绍,路由器,实现,adsl接入</a><span>发布日期：2009-12-24</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/j485385.html">快速完成Cisco路由器安装与维护</a></h3><p>可能很多人对Cisco路由器的安装和维护还不是很了解，下面我们主要讲解了如何快速完成Cisco路由器安装与维护。Cisco路由器作为网络通信的核心设备，在目前得以广泛的应用，下面就本人在实践中摸索出的经验做如下介绍。
+控制口接口的做法及连接。
+将Cisco2500／1000系列路由器附件中的控制电缆RJ45的一端连接到Cisco的CONSOLE口上，Cisco路由器则将MODEM电缆的DB25的一端接到Cisco的CONSOLE口上，DB9的一端连接到PC的COMl／2上。在PC上设置仿真终端程序：比如用WINDOWS中的TERMINAL程序，使用COMl／2，9600BPS，8 DATA BIT，2STOP BIT。其余使用默认值。做好控制口连接后，打开路由器的电源开关。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/j485385.html">作者：佚名&nbsp;&nbsp;关键字：快速,cisco路由器,安装,维护</a><span>发布日期：2009-12-22</span></div></li></ul></div><div class="ut_sp"></div><div class="ut_list"><ul><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/s485231.html">如何进入Cisco路由器配置模式</a></h3><p>Cisco路由器配置模式还有很多值得我们学习的地方，这里我们主要介绍如何进入Cisco路由器配置模式的详细步骤。Cisco路由器配置模式中命令行端口使用一个分等级的结构，这个结构需要登录到不同的模式下来完成详细的配置任务。从安全的角度考虑，cisco IOS软件将EXEC会话分为用户（USER）模式和特权（privileged）模式。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/s485231.html">作者：佚名&nbsp;&nbsp;关键字：如何,进入,cisco路由器配置,模式</a><span>发布日期：2009-12-21</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/l484911.html">了解Cisco路由器配置信息的详细步骤</a></h3><p>了解一些关于Cisco路由器配置信息的详细知识还是非常重要的，这里我们主要分析了Cisco路由器配置信息步骤，在网络日常管理与维护的工作中，你是否遇到过这种现象：由于忘记了口令，你被原来亲切的“朋友”——路由器或交换机强行拒于门外，无法进行参数的重新设置、信息统计。下面就针对几种常见而重要的网络设备的口令清除方法谈谈本人的一点“小窍门”。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/l484911.html">作者：佚名&nbsp;&nbsp;关键字：了解,cisco路由器配置,信息</a><span>发布日期：2009-12-18</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p484906.html">Cisco路由器本地验证和授权一点通</a></h3><p>相信Cisco路由器的用户对本地验证和授权都有所了解，下面我们主要针对此问题，给大家进行全面的介绍。在中小规模的网络中,网络中心的网络管理员往往需要对一个远程站点的管理员进行一定程度的授权,而不想让站点管理员使用所有的Cisco路由器特权口令,本文就以上问题做一个简单的分析和讨论。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p484906.html">作者：佚名&nbsp;&nbsp;关键字：cisco路由器,验证</a><span>发布日期：2009-12-18</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/l484732.html">两种方法教您快速恢复Cisco路由器密码</a></h3><p>了解一些Cisco路由器密码恢复方法，对于思科路由器用户还是非常重要的，这里我们主要介绍两种方法教您快速恢复Cisco路由器密码，在Cisco路由器密码忘记或丢失enable密码的情况时，一共有两种方法恢复，取决于你使用的路由器是哪一系列产品。
+Cisco路由器密码恢复第一种方法……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/l484732.html">作者：佚名&nbsp;&nbsp;关键字：方法,快速,恢复,cisco路由器</a><span>发布日期：2009-12-17</span></div></li><li><h3><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p484349.html">Cisco设备静态NAT基本配置步骤</a></h3><p>以下内容摘自笔者即将出版上市的《金牌网管师——大中型企业网络组建、配置与管理》一书，或者于明年将出版的《Cisco/H3C路由器配置与管理完全手册》一书。
+当你与外部网络进行通信时，你可以转换自己的私有IP地址到全局唯一的IP地址。可以通过静态或动态NAT来实现以上目的。静态NAT在内部本地址和内部全局地址之间建立一对一的映射关系，而动态NAT建立一个内部本地址到一个全局地址池的映射关系。……</p><div class="author"><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/p484349.html">作者：佚名&nbsp;&nbsp;关键字：cisco设备,nat,基本,配置</a><span>发布日期：2009-12-13</span></div></li></ul></div>
+      <div id="baidu1"></div>
+       </div>
+    <div id="baidu_can"></div>
+	<div class="share">
+      <div id="ckepop"> <span class="jiathis_txt">分享到</span> <a class="jiathis_button_qzone">QQ空间</a> <a class="jiathis_button_renren">人人网</a> <a class="jiathis_button_kaixin001">开心网</a> <a class="jiathis_button_douban">豆瓣</a> <a class="jiathis_button_tsina">新浪微博</a> <a class="jiathis_button_tqq">腾讯微博</a> <a rel="nofollow" href="https://web.archive.org/web/20171229074905/http://www.jiathis.com/share?uid=1567123" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a> <a class="jiathis_counter_style"></a> </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="right_360ad" id="tr360">
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://web.archive.org/web/20171229074905oe_/http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="340" height="200" title="ad">
+        <param name="movie" value="/swf/xiarijiuzhaigou.swf"/>
+        <param name="quality" value="high"/>
+        <embed src="https://web.archive.org/web/20171229074905oe_/http:/www.qqread.com/swf/xiarijiuzhaigou.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="340" height="200"></embed>
+      </object>
+    </div>
+    <div class="right_title">
+      <h5>相关技术类别</h5>
+    </div>
+    <div class="right_parcat">
+      <ul>
+        <ul><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/route/index.html" target="_blank">路由技术</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/exchange/index.html" target="_blank">交换技术</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/net-manage/index.html" target="_blank">网络管理</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/net-protocol/index.html" target="_blank">网络协议</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/wireless/index.html" target="_blank">无线技术</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/net-saft/index.html" target="_blank">安全技术</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/net-skill/index.html" target="_blank">应用技巧</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/net-knowledge/index.html" target="_blank">网络知识</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/net-case/index.html" target="_blank">网络方案</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/index.html" target="_blank">Cisco网络</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/huawei/index.html" target="_blank">华为网络</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/network-special/index.html" target="_blank">专题技术</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/storage/index.html" target="_blank">存储备份</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/network/tech/index.html" target="_blank">IT认证考试</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/network/server/index.html" target="_blank">服务器技术</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/network/bx/index.html" target="_blank">Cisco认证</a></li><li><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/network/buxian/index.html" target="_blank">综合布线</a></li></ul>
+      </ul>
+    </div>
+    <div class="right_content" id="baidu2"></div>
+    <div class="right_title">
+      <h5>热门技术文章</h5>
+      <span><a href="https://web.archive.org/web/20171229074905/http:/www.qqread.com/cisco/rank/index.html">&gt;&gt; 排行榜</a></span> </div>
+    <div class="right_content">
+      <div class="pic">
+        <iframe marginwidth="0" marginheight="0" frameborder="0" scrolling="No" src="https://web.archive.org/web/20171229074905if_/http:/www.qqread.com/artpicframe/1809/picFrame_db1.html" width="130" height="310"></iframe>
+      </div>
+      <div class="text">
+        <ul>
+          <li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p571325908.html" title="配置DHCP，ToD，TFTP服务在Cisco的cmts：一体化配置" target="_blank">配置DHCP，ToD，TFTP服务在Cisco</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/c121342908.html" title="以Catalyst 6509为主网络配置！" target="_blank">以Catalyst 6509为主网络配置！</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/x213912.html" title="初识Cisco3845路由器[ppt]" target="_blank">初识Cisco3845路由器[ppt]</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p451351908.html" title="CISCO IOS 软件主版本 12.4" target="_blank">CISCO IOS 软件主版本 12.4</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/h651305908.html" title="介绍两种恢复CISCO IOS的方法" target="_blank">介绍两种恢复CISCO IOS的方法</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p306905.html" title="Cisco IOS Cookbook 中文精简版第十八章日志" target="_blank">Cisco IOS Cookbook 中文精简版</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/z504175081.html" title="3500xl ios恢复全过程" target="_blank">3500xl ios恢复全过程</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p791313908.html" title="Cisco NAT 配置" target="_blank">Cisco NAT 配置</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p701333908.html" title="Cisco 7600系列Supervisor Engine 720-3BXL" target="_blank">Cisco 7600系列Supervisor Engin</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p111323908.html" title="Cisco产品报价（2004年7月4日报价）" target="_blank">Cisco产品报价（2004年7月4日报</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p441288908.html" title="Cisco实践中遇到的几个硬件和软件的BUG" target="_blank">Cisco实践中遇到的几个硬件和软</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/b281303908.html" title="分享：某客户在Cisco3640上配置VoIP" target="_blank">分享：某客户在Cisco3640上配置V</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right_title">
+      <h5>最新资讯文章</h5>
+    </div>
+    <div class="right_content">
+      <div class="text">
+        <ul>
+          <li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p496049.html" title="CISCO 3550交换机配置DHCP命令及步骤" target="_blank">CISCO 3550交换机配置DHCP命令及步骤</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p494070.html" title="CISCO PIX防火墙及网络安全设置手册" target="_blank">CISCO PIX防火墙及网络安全设置手册</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/v493469.html" title="思科统一通信与中国市场分析" target="_blank">思科统一通信与中国市场分析</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p492800.html" title="Cisco 命令行，学习cisco的基础" target="_blank">Cisco 命令行，学习cisco的基础</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p490331.html" title="Cisco、Juniper与HP的第四季度大战" target="_blank">Cisco、Juniper与HP的第四季度大战</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/e489532.html" title="黑客入侵技术详解：cisco路由入侵艺术 （3）" target="_blank">黑客入侵技术详解：cisco路由入侵艺术 （3）</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/e489531.html" title="黑客入侵技术详解：cisco路由入侵艺术 （2）" target="_blank">黑客入侵技术详解：cisco路由入侵艺术 （2）</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/e489530.html" title="黑客入侵技术详解：cisco路由入侵艺术 （1）" target="_blank">黑客入侵技术详解：cisco路由入侵艺术 （1）</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/t488891.html" title="深入浅出Cisco交换机使用技巧" target="_blank">深入浅出Cisco交换机使用技巧</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p488616.html" title="Cisco千兆交换机集成数据服务器功能详解" target="_blank">Cisco千兆交换机集成数据服务器功能详解</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right_title">
+      <h5>技术图文推荐</h5>
+    </div>
+    <div class="right_360ad">
+      <iframe marginwidth="0" marginheight="0" frameborder="0" scrolling="no" src="https://web.archive.org/web/20171229074905if_/http:/www.qqread.com/artpicframe/1809/picFrame_db2.html" width="340" height="260"></iframe>
+    </div>
+    <div class="right_title">
+      <h5>广告</h5>
+    </div>
+    <div class="left_ad_ut">
+      <div id="gg160ad"></div>
+      <div id="baidu160ad"></div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="right_title">
+      <h5>推荐阅读技术</h5>
+    </div>
+    <div class="right_content">
+      <div class="text">
+        <ul>
+          <li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/c684174081.html" title="高性价比推荐——小型网吧组网产品（图）" target="_blank">高性价比推荐——小型网吧组网产品（图）</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/c482175081.html" title="6506配置实例" target="_blank">6506配置实例</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p664113081.html" title="Cisco 12000系列路由器采用的信元打包技术" target="_blank">Cisco 12000系列路由器采用的信元打包技术</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/x786174081.html" title="网络管理经验五例" target="_blank">网络管理经验五例</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/r316565.html" title="浅谈IP安全策略：防范被Ping与封闭端口" target="_blank">浅谈IP安全策略：防范被Ping与封闭端口</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/y526175081.html" title="2610 ROMMON下灌IOS" target="_blank">2610 ROMMON下灌IOS</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/v766174081.html" title="思科：推出全球首套SIP型家用IP电话服务" target="_blank">思科：推出全球首套SIP型家用IP电话服务</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p411306908.html" title="CISCO学习问题之能否解释一下命令‘redistribute connected’？" target="_blank">CISCO学习问题之能否解释一下命令‘redistribute connec</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/p259513.html" title="Cisco3700系列应用服务路由器" target="_blank">Cisco3700系列应用服务路由器</a></li><li><a href="https://web.archive.org/web/20171229074905/http://www.qqread.com/cisco/v724174081.html" title="思科产品常见问题22问" target="_blank">思科产品常见问题22问</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right_title">
+      <h5>搜索您感兴趣的内容</h5>
+    </div>
+    <div class="right_content" id="gg_srch2"></div>
+  </div>
+</div>
+<!-- google 336x280 ad -->
+<span id="gg336ad_code">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1572879403720716";
+/* IT分类页336x280 */
+google_ad_slot = "1050507099";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20171229074905js_/http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</span>
+<script type="text/javascript">
+	document.getElementById('gg336utad').innerHTML = document.getElementById('gg336ad_code').innerHTML;
+	document.getElementById('gg336ad_code').innerHTML = "";
+</script>
+<span id="gglinkad200x90_code">
+<script type="text/javascript"><!--
+google_ad_client = "pub-1572879403720716";
+/* 200x90-2, 创建于 11-8-29 */
+google_ad_slot = "1185427469";
+google_ad_width = 200;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20171229074905js_/http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<script type="text/javascript"><!--
+google_ad_client = "pub-1572879403720716";
+/* 200x90-2, 创建于 11-8-29 */
+google_ad_slot = "1185427469";
+google_ad_width = 200;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20171229074905js_/http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</span>
+<script type="text/javascript">
+	document.getElementById('gglinkad200x90').innerHTML = document.getElementById('gglinkad200x90_code').innerHTML;
+	document.getElementById('gglinkad200x90_code').innerHTML = "";
+</script>
+<span id="baidu1_code">
+<script type="text/javascript">/*500*200，创建于2012-2-2*/ var cpro_id = 'u754352';</script>
+<script src="https://web.archive.org/web/20171229074905js_/http://cpro.baidu.com/cpro/ui/c.js" type="text/javascript"></script>
+</span>
+<script type="text/javascript">
+	if (document.getElementById('baidu1'))
+	    document.getElementById('baidu1').innerHTML=document.getElementById('baidu1_code').innerHTML;
+	else
+		document.getElementById('baidu_can').innerHTML=document.getElementById('baidu1_code').innerHTML;
+    document.getElementById('baidu1_code').innerHTML="";
+</script>
+<!-- end of baidu 500 ad code -->
+<span id="baidu2_code">
+<script type="text/javascript">/*336*280，创建于2012-2-2*/ var cpro_id = 'u754312';</script>
+<script src="https://web.archive.org/web/20171229074905js_/http://cpro.baidu.com/cpro/ui/c.js" type="text/javascript"></script>
+</span>
+<script type="text/javascript">
+	document.getElementById('baidu2').innerHTML = document.getElementById('baidu2_code').innerHTML;
+	document.getElementById('baidu2_code').innerHTML = "";
+</script>
+<span id="gg160ad_code">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1572879403720716";
+/* 160x600白底广告 */
+google_ad_slot = "8662754035";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20171229074905js_/http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</span>
+<script type="text/javascript">
+	document.getElementById('gg160ad').innerHTML = document.getElementById('gg160ad_code').innerHTML;
+	document.getElementById('gg160ad_code').innerHTML = "";
+</script>
+<span id="baidu160ad_code">
+<script type="text/javascript">/*160*600，创建于2012-2-2*/ var cpro_id = 'u754316';</script>
+<script src="https://web.archive.org/web/20171229074905js_/http://cpro.baidu.com/cpro/ui/c.js" type="text/javascript"></script>
+</span>
+<script type="text/javascript">
+	document.getElementById('baidu160ad').innerHTML = document.getElementById('baidu160ad_code').innerHTML;
+	document.getElementById('baidu160ad_code').innerHTML = "";
+</script>
+<div align="center" id="gg_srch1_code">
+  <!-- Search Google -->
+  <form method="get" action="https://web.archive.org/web/20171229074905/http://www.google.cn/search" target="google_window">
+    <table bgcolor="#ffffff">
+      <tr>
+        <td nowrap="nowrap" valign="top" align="left" height="32"><a href="https://web.archive.org/web/20171229074905/http://www.google.com/"> <img src="https://web.archive.org/web/20171229074905im_/http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+          <label for="sbi" style="display: none">输入您的搜索字词</label>
+          <input type="text" name="q" size="16" maxlength="255" value="" id="sbi">
+          </input>
+          <label for="sbb" style="display: none">提交搜索表单</label>
+          <input type="submit" name="sa" value="搜索" id="sbb">
+          </input>
+          <input type="hidden" name="client" value="pub-1572879403720716">
+          </input>
+          <input type="hidden" name="forid" value="1">
+          </input>
+          <input type="hidden" name="prog" value="aff">
+          </input>
+          <input type="hidden" name="ie" value="GB2312">
+          </input>
+          <input type="hidden" name="oe" value="GB2312">
+          </input>
+          <input type="hidden" name="hl" value="zh-CN">
+          </input>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <!-- Search Google -->
+</div>
+<script type="text/javascript">
+	document.getElementById('gg_srch1').innerHTML = document.getElementById('gg_srch1_code').innerHTML;
+	document.getElementById('gg_srch1_code').innerHTML = "";
+</script>
+<div id="gg_srch2_code">
+  <!-- SiteSearch Google -->
+  <form method="get" action="https://web.archive.org/web/20171229074905/http://www.google.cn/search" target="google_window">
+    <table border="0" bgcolor="#E8EFF7">
+      <tr>
+        <td nowrap="nowrap" valign="top" align="left" height="32"><a href="https://web.archive.org/web/20171229074905/http://www.google.com/"> <img src="https://web.archive.org/web/20171229074905im_/http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a> <br/>
+          <input type="hidden" name="domains" value="qqread.com">
+          </input>
+          <label for="sbi" style="display: none">输入您的搜索字词</label>
+          <input type="text" name="q" size="20" maxlength="255" value="" id="sbi">
+          </input>
+          <label for="sbb" style="display: none">提交搜索表单</label>
+          <input type="submit" name="sa" value="搜索" id="sbb">
+          </input>
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap"><table>
+            <tr>
+              <td><input type="radio" name="sitesearch" value="" id="ss0">
+                </input>
+                <label for="ss0" title="搜索网络"><font size="-1" color="#000000">Web</font></label></td>
+              <td><input type="radio" name="sitesearch" value="qqread.com" checked id="ss1">
+                </input>
+                <label for="ss1" title="搜索 qqread.com"><font size="-1" color="#000000">qqread.com</font></label></td>
+            </tr>
+          </table>
+          <input type="hidden" name="client" value="pub-1572879403720716">
+          </input>
+          <input type="hidden" name="forid" value="1">
+          </input>
+          <input type="hidden" name="prog" value="aff">
+          </input>
+          <input type="hidden" name="ie" value="GB2312">
+          </input>
+          <input type="hidden" name="oe" value="GB2312">
+          </input>
+          <input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#FFFFFF;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1">
+          </input>
+          <input type="hidden" name="hl" value="zh-CN">
+          </input>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <!-- SiteSearch Google -->
+</div>
+<script type="text/javascript">
+	document.getElementById('gg_srch2').innerHTML = document.getElementById('gg_srch2_code').innerHTML;
+	document.getElementById('gg_srch2_code').innerHTML = "";
+</script>
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript">
+var jiathis_config={
+	data_track_clickback:true,
+	summary:"",
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20171229074905js_/http://v2.jiathis.com/code/jia.js?uid=1567123" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+<div class="bottom">
+  <div class="bottom_line"></div>
+  <div class="copyright"><img src="https://web.archive.org/web/20171229074905im_/http:/www.qqread.com/cisco/images/qqread_copyright1809.gif" alt="巧巧电脑网络版权" width="350" height="20"/></div>
+  <div class="foot">
+    <script type="text/javascript" src="https://web.archive.org/web/20171229074905js_/http:/www.qqread.com/2008js/foot.js"></script>
+  </div>
+</div>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 07:49:05 Dec 29, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:52:30 Aug 10, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.537
+  exclusion.robots: 0.022
+  exclusion.robots.policy: 0.009
+  esindex: 0.012
+  cdx.remote: 22.251
+  LoadShardBlock: 191.041 (3)
+  PetaboxLoader3.datanode: 233.203 (4)
+  load_resource: 154.674
+  PetaboxLoader3.resolve: 85.11
+-->
